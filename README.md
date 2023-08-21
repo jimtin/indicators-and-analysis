@@ -41,3 +41,31 @@ payload: {
     rsi_value: <the value used for the RSI atomic data>
 }
 ```
+
+### EMA: Exponential Moving Average
+The Exponential Moving Average is a popular indicator to identify momentum changes and directions. 
+
+*Find Out More* [How to Build a 20-EMA on MetaTrader with Python and Pandas](https://medium.com/trading-data-analysis/how-to-build-a-20-ema-on-metatrader-with-python-and-pandas-60af03d1516c)
+
+#### To Use
+*API QUERY*
+```
+url: https://indicators-and-analysis.azurewebsites.net/api/calc-ema
+payload: {
+    ema_length: <length, defaults to 20>,
+    ema_value: <the value to calculate the EMA on, defaults to 'candle_close'>,
+    candle_timestamp: <timestamp of the candles, required>,
+    candlestick_data: <data to perform calculations on, required>,
+    accuracy_filter: <eliminate the ema_length * 5 rows to allow EMA to be accurate. Defaults to True>
+}
+```
+*API RETURN*
+```
+{
+    candlestick_data: <original data with candlesticks added>,
+    ema_length: <length of the ema>,
+    ema_value: <the column of the data the ema was calculated on>,
+    accuracy_filter: <the value of the accuracy filter which was used>,
+    ema_name: <the name of the columns generated>
+}
+```
