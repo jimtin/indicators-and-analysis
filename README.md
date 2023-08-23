@@ -69,3 +69,38 @@ payload: {
     ema_name: <the name of the columns generated>
 }
 ```
+
+### Ichimoku Cloud
+The Ichimoku Cloud is a collection of technical indicators that show support and resistance levels, as well as momentum and trend direction.
+
+*Find Out More* [What Is the Ichimoku Cloud Technical Analysis Indicator](https://www.investopedia.com/terms/i/ichimoku-cloud.asp)
+
+#### To Use
+*API QUERY*
+```
+url: https://indicators-and-analysis.azurewebsites.net/api/calc-ichimoku
+payload: {
+    tenkan: <tenkan value>,
+    kijun: <kijun value>,
+    senoku: <senoku value>,
+    high_value: <column of candlestick to get high value from. Default 'high'>,
+    low_value: <column of candlestick to get low value from. Default 'low'>,
+    close_value: <column of candlestick to get close value from. Default 'candle_close'>,
+    candlestick_data: <trade_data to assess for ichimoku>
+}
+```
+*API RETURN*
+Returns the ichimoku and the ichimoku shifted down by the offset. This means you can easily check the future value of the Ichimoku against a current row. 
+```
+{
+    'candlestick_data': candlestick_data with Ichimoku columns added,
+    'tenkan': tenkan,
+    'kijun': kijun,
+    'senoku': senoku,
+    'high_value': high_value,
+    'low_value': low_value,
+    'close_value': close_value,
+    'isa_name': f'ISA_{tenkan}',
+    'isb_name': f'ISB_{kijun}'
+}
+```
