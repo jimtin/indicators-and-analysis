@@ -9,10 +9,10 @@ A series of API's exposed to simplify getting indicators and analysis.
 3. [AppnologyJames Medium](https://medium.com/@appnologyjames) -> Blog from one of our founders
 
 ## Follow Our Journey
-1. [Landing Page and Sign Up](https://traderbotsignup.vercel.app/)
+1. [Landing Page and Sign Up](https://www.tradeoxy.com/)
 2. [Toy Version WIP](https://traderbotdemo.vercel.app/)
-3. [Demo Video](https://www.youtube.com/watch?v=E1t8gG64pAk&t=12s)
-4. [LinkedIn - James Hinton, Founder](https://www.linkedin.com/in/jameshinton84/)
+3. [Demo Video](https://www.youtube.com/watch?v=z9tu0Gwmuak)
+4. [LinkedIn - James Hinton, Founder](https://www.linkedin.com/in/appnologyjames/)
 5. [LinkedIn - Mitaanshu Agarwal](https://www.linkedin.com/in/mitaanshu-agarwal/)
 6. [Twitter (X)](https://twitter.com/algoquant_trade)
 
