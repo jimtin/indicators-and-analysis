@@ -42,7 +42,7 @@ def rsi(req: func.HttpRequest) -> func.HttpResponse:
             status_code=400
         )
     # Make sure timestamp is in datetime format
-    candle_dataframe['candle_timestamp'] = pandas.to_datetime(candle_dataframe['candle_timestamp'])
+    candle_dataframe['candle_timestamp'] = pandas.to_datetime(candle_dataframe['candle_timestamp'], unit='ms')
     # Sort by timestamp
     candle_dataframe = candle_dataframe.sort_values(by='candle_timestamp')
     # Calculate the RSI
@@ -98,7 +98,7 @@ def ema(req: func.HttpRequest) -> func.HttpResponse:
             status_code=400
         )
     # Make sure timestamp is in datetime format
-    candle_dataframe['candle_timestamp'] = pandas.to_datetime(candle_dataframe['candle_timestamp'])
+    candle_dataframe['candle_timestamp'] = pandas.to_datetime(candle_dataframe['candle_timestamp'], unit='ms')
     # Sort by timestamp
     candle_dataframe = candle_dataframe.sort_values(by='candle_timestamp')
     # Check if accuracy_filter is specified
