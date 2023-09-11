@@ -13,6 +13,9 @@ def rsi(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('RSI function processed a request.')
     # Get the RSI parameters from the request
     period = req.get_json().get('rsi_length')
+    # Cast period into an integer
+    if period is not None:
+        period = int(period)
     # If period is not specified, default to 14
     if period is None:
         period = 14
@@ -69,6 +72,9 @@ def ema(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('EMA function processed a request.')
     # Get the EMA parameters from the request
     period = req.get_json().get('ema_length')
+    # Cast period into an integer
+    if period is not None:
+        period = int(period)
     # If period is not specified, default to 20
     if period is None:
         period = 20
