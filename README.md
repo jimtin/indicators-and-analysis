@@ -1,4 +1,4 @@
-# traderbot: democratizing advanced trading
+# tradeoxy: democratizing advanced trading
 
 ## Open Source Indicators and Analysis
 A series of API's exposed to simplify getting indicators and analysis. 
